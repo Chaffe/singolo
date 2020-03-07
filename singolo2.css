@@ -104,7 +104,7 @@ body{
 }
 
 .portfolio__wrapper {
-  padding: 63px 0 67px 0;
+  padding: 64px 0 66px 0;
 } 
 
 .portfolio__article {
@@ -131,7 +131,7 @@ body{
 }
 
 .portfolio__tags {
-  margin-top: 17px;
+  margin-top: 16px;
   margin-left: 41px;
 }
 
@@ -162,7 +162,7 @@ body{
 }
 
 .portfolio__content {
-  margin: 19px 40px 0 40px;
+  margin: 19.8px 40px 0 40px;
 }
 
 .layout-4-column {
@@ -178,6 +178,11 @@ body{
   height: 187px;
   margin-bottom: 20px;
 }
+
+
+
+
+
 
 .about-us {
   max-height: 728px; 
@@ -215,13 +220,10 @@ body{
   color: #767e9e;
 }
 
-.layout-3-column {
+.about-us__team {
   display: flex;
   justify-content: space-between;
-}
-
-.about-us__team {
-  margin: 45px 40px 0 40px;
+  margin: 46px 40px 0 40px;
 }
 
 .about-us__teammate {
@@ -233,6 +235,8 @@ body{
 }
 
 .about-us__teammate__name {
+  max-height: 18px;
+  max-width: 300px;
   margin-top: 15px;
   transform: translateX(-1px);
 
@@ -242,10 +246,14 @@ body{
   font-size: 1.8rem;
   letter-spacing: -0.15px;
   color: #666d89;
+
+  overflow: hidden;
 }
 
 .about-us__teammate__description {
-  margin-top: 11px;
+  max-height: 42px;
+  max-width: 300px;
+  margin-top: 10px;
   
   font-family: "Lato", Verdana, sans-serif;
   font-weight: 400;
@@ -254,15 +262,27 @@ body{
   line-height: 21px;
   letter-spacing: -0.06px;
   color: #767e9e;
+  text-align: justify;
+
+  overflow: hidden;
 }
 
 .socials {
+  height: 32px;
   margin-top: 24px;
   margin-left: 1px;
 }
 
+.about-us__teammate_desmond,
+.about-us__teammate_desmond .socials {
+  margin-left: 0;
+}
+
 .social__link {
   display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
   
   text-decoration: none;
 }
@@ -271,7 +291,6 @@ body{
   display: inline-block;
   width: 32px;
   height: 32px;
-  margin-right: 5px; 
 }
 
 .social-icon:hover {
