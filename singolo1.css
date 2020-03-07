@@ -273,7 +273,9 @@ body{
 }
 
 .our-services__description {
-  padding-top: 18px;
+  margin-top: 18px;
+  max-width: 940px;
+  max-height: 60px;
   
   font: 1.8rem "Lato", sans-serif ;
   font-style: normal;
@@ -281,6 +283,8 @@ body{
   line-height: 30px;
   letter-spacing: 0.15px;
   color: #767e9e;
+
+  overflow: hidden;
 }
 
 .layout-3-column {
@@ -327,7 +331,7 @@ body{
 }
 
 .service-item__description {
-  padding-top: 8px;
+  margin-top: 8px;
   max-height: 73px;
   
   font: 1.2rem "Lato", sans-serif;
