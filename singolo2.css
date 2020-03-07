@@ -104,11 +104,10 @@ body{
 }
 
 .portfolio__wrapper {
-  max-height: 864px;
   padding: 63px 0 67px 0;
 } 
 
-.portfolio__article{
+.portfolio__article {
   margin-left: 40px;
 }
 
