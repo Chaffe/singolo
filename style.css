@@ -104,7 +104,7 @@ body{
 }
 
 .header__logo {
-  margin-left: 40px;
+  margin-left: 40px;         
 }
 
 .header__logo__title {
@@ -171,7 +171,7 @@ body{
   color: #d3625c;
 }
 
-.header__navigation__link_active {
+.header__navigation__link .active {
   color: #d3625c;
 }
 
@@ -185,7 +185,7 @@ body{
   border-bottom: 6px solid #ea676b;
 }
 
-.slider__wrapper {
+.slide1 {
   position: relative;
 }
 
@@ -226,15 +226,74 @@ body{
   position: absolute;
 }
 
+.slider__phone__shadow,
+.slider__phone__body,
+.slider__phone__screen,
+.slider__phone__button {
+  position: absolute;
+}
+
 .slider__phone_vertical {
   top: 53px;
   left: 112px;
  
   width: 240px;
   height: 483px;
-  
-  background-image: url('assets/slider/1.png');
 }
+
+.slider__phone__shadow_vertical {
+  width: 240px;
+  height: 483px;
+  
+  z-index: 1;
+  background-image: url("assets/slider2/phone-shadow_vertical.png");
+}
+
+.slider__phone__body_vertical {
+  width: 216px;
+  height: 458px;
+  
+  z-index: 2;
+  background-image: url("assets/slider2/phone-body_vertical.png");
+}
+
+.screen-active {
+  opacity: 1 !important;
+}
+
+.slider__phone__screen_vertical {
+  top: 65px;
+  left: 14px;
+  
+  width: 188px;
+  height: 333px;
+  
+  z-index: 3;
+  background-image: url("assets/slider2/phone-screen_vertical.png");
+  opacity: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.slider__phone__button_vertical {
+  position: absolute;
+  top: 408px;
+  left: 87px;
+
+  width: 42px;
+  height: 42px;
+
+  z-index: 4;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+}
+
+.slider__phone__button_vertical:hover {
+  cursor: pointer;
+}
+
+
 
 .slider__phone_horizontal {
   top: 174px;
@@ -242,9 +301,55 @@ body{
 
   width: 484px;
   height: 240px;
-
-  background-image: url('assets/slider/2.png');
 }
+
+.slider__phone__shadow_horizontal {
+  width: 483px;
+  height: 240px;
+  
+  z-index: 1;
+  background-image: url("assets/slider2/phone-shadow_horizontal.png");
+}
+
+.slider__phone__body_horizontal {
+  width: 458px;
+  height: 216px;
+  
+  z-index: 2;
+  background-image: url("assets/slider2/phone-body_horizontal.png");
+}
+
+.slider__phone__screen_horizontal {
+  top: 14px;
+  left: 60px;
+  
+  width: 333px;
+  height: 188px;
+  
+  z-index: 3;
+  background-image: url("assets/slider2/phone-screen_horizontal.png");
+  opacity: 0;
+  cursor: pointer;
+}
+
+.slider__phone__button_horizontal {
+  position: absolute;
+  top: 87px;
+  left: 8px;
+
+  width: 42px;
+  height: 42px;
+
+  z-index: 4;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0;
+}
+
+
+
+
 
 
 
@@ -282,6 +387,7 @@ body{
   line-height: 30px;
   letter-spacing: 0.15px;
   color: #767e9e;
+  text-align: justify;
 
   overflow: hidden;
 }
@@ -476,6 +582,7 @@ body{
   line-height: 30px;
   letter-spacing: 0.15px;
   color: #767e9e;
+  text-align: justify;
 }
 
 .about-us__team {
@@ -622,6 +729,7 @@ body{
   line-height: 30px;
   letter-spacing: 0.15px;
   color: #f0d8d9;
+  text-align: justify;
 }
 
 .layout-2-column {
@@ -757,7 +865,6 @@ body{
 
 .get-a-quote__contact__description {
   margin-top: 10px;
-  text-align: justify;
   
   font-family: "Lato", Verdana, sans-serif;
   font-weight: 400;
@@ -766,6 +873,7 @@ body{
   line-height: 22px;
   letter-spacing: -0.15px; 
   color: #f0d8d9;
+  text-align: justify;
 }
 
 .get-a-quote__contact__tools {

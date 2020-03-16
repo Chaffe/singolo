@@ -16,12 +16,12 @@
           </h1>
         </div>
         <nav class="header__navigation">
-          <ul class="header__navigation__list">
-            <li class="header__navigation__item"><a href="#" class="header__navigation__link header__navigation__link_active">HOME</a></li>
-            <li class="header__navigation__item"><a href="#" class="header__navigation__link">SERVICES</a></li>
-            <li class="header__navigation__item"><a href="#" class="header__navigation__link">PORTFOLIO</a></li>
-            <li class="header__navigation__item"><a href="#" class="header__navigation__link">ABOUT</a></li>
-            <li class="header__navigation__item"><a href="#" class="header__navigation__link">CONTACT</a></li> 
+          <ul class="header__navigation__list" id="menu">
+            <li class="header__navigation__item"><a href="index.html" class="header__navigation__link active">HOME</a></li>
+            <li class="header__navigation__item"><a href="#services" class="header__navigation__link">SERVICES</a></li>
+            <li class="header__navigation__item"><a href="#portfolio" class="header__navigation__link">PORTFOLIO</a></li>
+            <li class="header__navigation__item"><a href="#about" class="header__navigation__link">ABOUT</a></li>
+            <li class="header__navigation__item"><a href="#contact" class="header__navigation__link">CONTACT</a></li> 
           </ul>
         </nav>
       </div>
@@ -29,13 +29,26 @@
   </header>
   <div class="slider">
     <div class="slider__wrapper wrapper">
-      <div class="slider__arrow slider__arrow_left"></div>
-      <div class="slider__arrow slider__arrow_right"></div>
-      <div class="slider__phone slider__phone_vertical"></div>
-      <div class="slider__phone slider__phone_horizontal"></div>
+      <div class="slide1 slide slide_active">
+        <div class="slider__arrow slider__arrow_left"></div>
+        <div class="slider__arrow slider__arrow_right"></div>
+        <div class="slider__phone slider__phone_vertical">
+          <div class="slider__phone__shadow slider__phone__shadow_vertical"></div>
+          <div class="slider__phone__body slider__phone__body_vertical"></div>
+          <div class="slider__phone__screen slider__phone__screen_vertical screen-active"></div>
+          <button class="slider__phone__button slider__phone__button_vertical"></button>
+        </div>
+        <div class="slider__phone slider__phone_horizontal">
+          <div class="slider__phone__shadow slider__phone__shadow_horizontal"></div>
+          <div class="slider__phone__body slider__phone__body_horizontal"></div>
+          <div class="slider__phone__screen slider__phone__screen_horizontal screen-active"></div>
+          <button class="slider__phone__button slider__phone__button_horizontal"></button>
+        </div>
+      </div>
+      <div class="slide2 slide"></div>
     </div>
   </div>
-  <div class="our-services"> 
+  <div class="our-services" id="services"> 
     <div class="our-services__wrapper wrapper">
       <div class="our-services__article">
         <h2 class="our-services__title">Our Services</h2>
@@ -87,7 +100,7 @@
       </div>
     </div>
   </div>
-  <div class="portfolio">
+  <div class="portfolio" id="portfolio">
     <div class="portfolio__wrapper wrapper">
       <div class="portfolio__article">
         <h2 class="portfolio__title title">Portfolio</h2>
@@ -141,7 +154,7 @@
       </div>
     </div>
   </div>
-  <div class="about-us">
+  <div class="about-us" id="about">
     <div class="about-us__wrapper wrapper">
       <div class="about-us__article">
         <h2 class="about-us__title">About Us</h2>
@@ -208,7 +221,7 @@
       </div>
     </div>
   </div>
-  <div class="get-a-quote">
+  <div class="get-a-quote" id="contact">
     <div class="get-a-quote__wrapper wrapper">
       <div class="get-a-quote__article">
           <h2 class="get-a-quote__title">Get a Quote</h2>
@@ -263,5 +276,6 @@
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
