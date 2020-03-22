@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="home">
     <div class="header__wrapper wrapper">
       <div class="header__layout">
         <div class="header__logo">
@@ -16,22 +16,20 @@
           </h1>
         </div>
         <nav class="header__navigation">
-          <ul class="header__navigation__list" id="menu">
-            <li class="header__navigation__item"><a href="index.html" class="header__navigation__link active">HOME</a></li>
-            <li class="header__navigation__item"><a href="#services" class="header__navigation__link">SERVICES</a></li>
-            <li class="header__navigation__item"><a href="#portfolio" class="header__navigation__link">PORTFOLIO</a></li>
-            <li class="header__navigation__item"><a href="#about" class="header__navigation__link">ABOUT</a></li>
-            <li class="header__navigation__item"><a href="#contact" class="header__navigation__link">CONTACT</a></li> 
+          <ul class="navigation__list" id="menu">
+            <li class="navigation__item"><a href="#home" class="navigation__link active">HOME</a></li>
+            <li class="navigation__item"><a href="#services" class="navigation__link">SERVICES</a></li>
+            <li class="navigation__item"><a href="#portfolio" class="navigation__link">PORTFOLIO</a></li>
+            <li class="navigation__item"><a href="#about" class="navigation__link">ABOUT</a></li>
+            <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACT</a></li> 
           </ul>
         </nav>
       </div>
     </div>
   </header>
-  <div class="slider">
+  <div class="slider bg_red" id="slider">
     <div class="slider__wrapper wrapper">
       <div class="slide1 slide slide_active">
-        <div class="slider__arrow slider__arrow_left"></div>
-        <div class="slider__arrow slider__arrow_right"></div>
         <div class="slider__phone slider__phone_vertical">
           <div class="slider__phone__shadow slider__phone__shadow_vertical"></div>
           <div class="slider__phone__body slider__phone__body_vertical"></div>
@@ -46,6 +44,8 @@
         </div>
       </div>
       <div class="slide2 slide"></div>
+      <div class="slider__arrow slider__arrow_left"></div>
+      <div class="slider__arrow slider__arrow_right"></div>
     </div>
   </div>
   <div class="our-services" id="services"> 
@@ -122,7 +122,7 @@
           </div>
           <div class="layout-4-column__item">
             <img src="assets/portfolio/3.jpg" alt="3" class="layout-4-column__image">
-            </div>
+          </div>
           <div class="layout-4-column__item">
             <img src="assets/portfolio/4.jpg" alt="4" class="layout-4-column__image">
           </div>
@@ -255,7 +255,7 @@
       </div>
     </div>
   </div>
-  <div class="footer">
+  <footer class="footer">
     <div class="footer__wrapper wrapper">
       <div class="footer__layout">
         <span class="footer__copyright">© Copyright 2013</span>
