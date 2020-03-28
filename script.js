@@ -1,26 +1,45 @@
 // HEADER: navigation-item active
-const menu = document.querySelector('.header__navigation__list');
-const divs = document.querySelectorAll('#home, #slider, body > div, #footer');
-const links = document.querySelectorAll('#menu a');
+// const menu = document.querySelector('.header__navigation__list');
+// const divs = document.querySelectorAll('#home, #slider, body > div, #footer');
+// const links = document.querySelectorAll('#menu a');
 
-document.addEventListener('scroll', onScroll);
+// document.addEventListener('scroll', onScroll);
 
-function onScroll (event) {
-  const curPos = window.scrollY;
+// function onScroll (event) {
+//   const curPos = window.scrollY;
   
-  divs.forEach((el) => {
-    if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
-      links.forEach((a) => {
-        a.classList.remove('active')
-        if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-          a.classList.add('active');
-        }
-      })
-    }
+//   divs.forEach((el) => {
+//     if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
+//       links.forEach((a) => {
+//         a.classList.remove('active')
+//         if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+//           a.classList.add('active');
+//         }
+//       })
+//     }
 
     
-  });
-}
+//   });
+// }
+
+const MENU = document.getElementById('menu');
+
+MENU.addEventListener('click', event => {
+  if (event.target.tagName === 'A') {
+    event.preventDefault();
+    MENU.querySelectorAll('.navigation__link').forEach(el => el.classList.remove('active'));
+    event.target.closest('.navigation__link').classList.add('active');
+
+    let sectionId = event.target.getAttribute('href');
+    let sectionOffsetTop = document.querySelector(sectionId).offsetTop;
+    let headerOffsetHeight = document.querySelector('header').offsetHeight;
+
+    window.scrollTo({
+      top: sectionOffsetTop - headerOffsetHeight,
+      behavior: 'smooth'
+    });
+  }
+});
 
 // ----------------------------------------------------
 
@@ -87,6 +106,9 @@ function changecurrentSlide (newSlide) {
 
 function showSlide (direction) {
   slides[currentSlide].classList.add('next-slide', direction);
+
+  changeBg(currentSlide);
+
   slides[currentSlide].addEventListener('animationend', function() {
     this.classList.remove('next-slide', direction);
     this.classList.add('slide_active');
@@ -95,11 +117,11 @@ function showSlide (direction) {
 }
 
 function changeBg (currentSlide) {
-  // if(currentSlide % 2 == 0) {
-  //   sliderBg.style.backgroundColor = '#f06c64';
-  // } else {
-  //   slider.style.backgroundColor = '#648BF0';
-  // }
+  if (currentSlide) {
+    sliderBg.classList.add('bg_blue');
+  } else {
+    sliderBg.classList.remove('bg_blue');
+  }
 }
 
 // ----------------------------------------------------
@@ -129,19 +151,78 @@ function mixItems() {
   itemsContainer.append(fragment);
 }
 
-const portfolioContainer = document.querySelector('.layout-4-column');
+// const portfolioContainer = document.querySelector('.layout-4-column');
 
-portfolioContainer.addEventListener('click', event => {
-  if (event.target.tagName === 'IMG') {
-    let li = event.target.closest('.layout-4-column__item')
+// portfolioContainer.addEventListener('click', event => {
+//   if (event.target.tagName === 'IMG') {
+//     let li = event.target.closest('.layout-4-column__item')
 
-    if (li.classList.contains('item_active')) {
-      li.classList.remove('item_active');
-    } else {
-      portfolioContainer.querySelectorAll('li').forEach(el => el.classList.remove('item_active'));
-      li.classList.add('item_active');
+//     if (li.classList.contains('item_active')) {
+//       li.classList.remove('item_active');
+//     } else {
+//       portfolioContainer.querySelectorAll('li').forEach(el => el.classList.remove('item_active'));
+//       li.classList.add('item_active');
+//     }
+//   }
+// });
+
+// ----------------------------------------------------
+
+//Interaction with pictures in Portfolio
+document.querySelectorAll('.layout-4-column__item').forEach( project => project.addEventListener('click', switchBorder));
+
+function switchBorder(event){
+    if(event.target.parentElement.classList.contains('item_active'))
+        event.target.parentElement.classList.remove('item_active');
+    else{
+        document.querySelectorAll('.layout-4-column__item').forEach( project => {
+            project.classList.remove('item_active');
+        });
+        event.target.parentElement.classList.add('item_active');
     }
+}
+
+// ----------------------------------------------------
+
+// Form sending
+const form = document.getElementById('form');
+const submit = document.getElementById('submit');
+const modal = document.getElementById('modal');
+const modalText = modal.querySelector('.modal__text');
+const modalButton = modal.querySelector('.modal__button');
+
+submit.addEventListener('click', event => {
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+
+  if (nameInput.checkValidity() && emailInput.checkValidity()) {
+    event.preventDefault();
+
+    showModal();
   }
 });
+
+function showModal() {
+  const subject = document.getElementById('subject').value.toString();
+  const message = document.getElementById('message').value.toString();
+
+  let text = '<p>Письмо отправлено</p>';
+  text += `<p>${subject ? 'Тема: ' + subject : 'Без темы'}</p>`;
+  text += `<p>${message ? 'Описание: ' + message : 'Без описания'}</p>`;
+
+  modalText.innerHTML = text;
+  modal.classList.add('modal__overlay_show');
+}
+
+modal.addEventListener('click', closeModal);
+
+function closeModal(event) {
+  if (event.target === modalButton || event.target === modal) {
+    modal.classList.remove('modal__overlay_show');
+    modalText.innerHTML = '';
+    form.reset();
+  }
+}
+
 
 // ----------------------------------------------------

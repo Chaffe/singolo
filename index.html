@@ -17,7 +17,7 @@
         </div>
         <nav class="header__navigation">
           <ul class="navigation__list" id="menu">
-            <li class="navigation__item"><a href="#home" class="navigation__link active">HOME</a></li>
+            <li class="navigation__item"><a href="#slider" class="navigation__link active">HOME</a></li>
             <li class="navigation__item"><a href="#services" class="navigation__link">SERVICES</a></li>
             <li class="navigation__item"><a href="#portfolio" class="navigation__link">PORTFOLIO</a></li>
             <li class="navigation__item"><a href="#about" class="navigation__link">ABOUT</a></li>
@@ -228,12 +228,12 @@
           <p class="get-a-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       </div>
       <div class="layout-2-column">
-        <form action="https://www.w3schools.com/action_page.php" class="get-a-quote__form" method="get" target="_blank">
+        <form action class="get-a-quote__form" id="form" method="POST">
           <input class="get-a-quote__input get-a-quote__input_name" type="text" name="name" id="name" placeholder="Name (Required)" minlength="4" maxlength="16" required>
           <input class="get-a-quote__input get-a-quote__input_email" type="email" name="email" id="email" placeholder="Email (Required)" minlength="4" required>
           <input class="get-a-quote__input get-a-quote__input_subject" type="text" name="subject" id="subject" placeholder="Subject" minlength="4">
-          <textarea class="get-a-quote__textarea" name="textarea" id="textarea" placeholder="Describe your project in detail..."></textarea>
-          <button class="get-a-quote__button">Submit</button>
+          <textarea class="get-a-quote__textarea" name="textarea" id="message" placeholder="Describe your project in detail..." maxlength="733"></textarea>
+          <button class="get-a-quote__button" id="submit">Submit</button>
         </form>
         <div class="get-a-quote__contact">
           <div class="get-a-quote__contact__article">
@@ -274,6 +274,12 @@
           </a>
         </div> 
       </div>
+    </div>
+  </footer>
+  <div class="modal__overlay" id="modal">
+    <div class="modal__content">
+      <div class="modal__text"></div>
+      <button class="modal__button button-submit">OK</button>
     </div>
   </div>
   <script src="script.js"></script>
