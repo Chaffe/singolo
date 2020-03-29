@@ -114,7 +114,7 @@ body{
 }
 
 .header__logo {
-  margin-left: 40px;         
+  margin-left: 3.33%;         
 }
 
 .header__logo__title {
@@ -207,6 +207,7 @@ body{
 .slider__wrapper {
   position: relative;
 
+  width: 100%;
   height: 600px;
   overflow: hidden;
 }
@@ -281,6 +282,7 @@ body{
 
 .slider__arrow {
   position: absolute;
+  top: 47.33%;
   
   width: 15px;
   height: 15px;
@@ -299,15 +301,13 @@ body{
 }
 
 .slider__arrow_left {
-  top: 284px;
-  left: 45px;
+  left: 4.41%;
 
   transform: rotate(-45deg);
 }
 
 .slider__arrow_right {
-  top: 284px;
-  right: 43px;
+  right: 4.21%;
 
   transform: rotate(135deg);
 }
@@ -324,24 +324,24 @@ body{
 }
 
 .slider__phone_vertical {
-  top: 53px;
-  left: 112px;
+  top: 8.83%;
+  left: 10.98%;
  
-  width: 240px;
-  height: 483px;
+  width: 23.53%;
+  height: 80.5%;
 }
 
 .slider__phone__shadow_vertical {
-  width: 240px;
-  height: 483px;
+  width: 100%;
+  height: 100%;
   
   z-index: 1;
   background-image: url("assets/slider/slide1/phone-shadow_vertical.png");
 }
 
 .slider__phone__body_vertical {
-  width: 216px;
-  height: 458px;
+  width: 90%;
+  height: 94.824%;
   
   z-index: 2;
   background-image: url("assets/slider/slide1/phone-body_vertical.png");
@@ -353,11 +353,11 @@ body{
 }
 
 .slider__phone__screen_vertical {
-  top: 65px;
-  left: 14px;
+  top: 13.46%;
+  left: 5.83%;
   
-  width: 188px;
-  height: 333px;
+  width: 78.33%;
+  height: 68.94%;
   
   z-index: 3;
   background-image: url("assets/slider/slide1/phone-screen_vertical.png");
@@ -368,11 +368,11 @@ body{
 
 .slider__phone__button_vertical {
   position: absolute;
-  top: 408px;
-  left: 87px;
+  top: 84.47%;
+  left: 35.25%;
 
-  width: 42px;
-  height: 42px;
+  width: 17.5%;
+  height: 8.7%;
 
   z-index: 4;
   border-radius: 50%;
@@ -387,35 +387,35 @@ body{
 
 
 .slider__phone_horizontal {
-  top: 174px;
-  left: 425px;
+  top: 29%;
+  left: 41.66%;
 
-  width: 484px;
-  height: 240px;
+  width: 47.45%;
+  height: 40%;
 }
 
 .slider__phone__shadow_horizontal {
-  width: 483px;
-  height: 240px;
+  width: 100%;
+  height: 100%;
   
   z-index: 1;
   background-image: url("assets/slider/slide1/phone-shadow_horizontal.png");
 }
 
 .slider__phone__body_horizontal {
-  width: 458px;
-  height: 216px;
+  width: 94.824%;
+  height: 90%;
   
   z-index: 2;
   background-image: url("assets/slider/slide1/phone-body_horizontal.png");
 }
 
 .slider__phone__screen_horizontal {
-  top: 14px;
-  left: 60px;
+  top: 5.83%;
+  left: 12.42%;
   
-  width: 333px;
-  height: 188px;
+  width: 68.64%;
+  height: 78.33%;
   
   z-index: 3;
   background-image: url("assets/slider/slide1/phone-screen_horizontal.png");
@@ -425,11 +425,11 @@ body{
 
 .slider__phone__button_horizontal {
   position: absolute;
-  top: 87px;
-  left: 8px;
+  top: 36.25%;
+  left: 1.65%;
 
-  width: 42px;
-  height: 42px;
+  width: 8.7%;
+  height: 17.5%;
 
   z-index: 4;
   border-radius: 50%;
@@ -439,7 +439,82 @@ body{
 }
 
 
+@media (max-width: 1019px) {
+  .slider {
+    border-bottom: 4.52px solid #ea676b;
+  }
 
+  .slider__arrow {
+    top: 47.43%;
+  }
+
+  .slider__arrow_left {
+    left: 3.83%;
+  }
+
+  .slider__arrow_right {
+    right: 3.5%;
+  }
+
+  .slider__phone_vertical {
+    top: 8.985%;
+    left: 10.98%;
+
+    width: 23.53%;
+    height: 80.5%;
+  }
+
+  .slider__phone__shadow_vertical {
+    width: 100%;
+    /* min-width: 162.36px; */
+    max-width: 100%;
+    height: 100%;
+    /* min-height: 344.26px; */
+  }
+
+  .slider__phone__body_vertical {
+    width: 89.84%;
+    height: 94.66%;
+  }
+  
+  .slider__phone__screen_vertical {
+    width: 78.33%;
+    height: 68.64%;
+  }
+  
+  .slider__phone__button_vertical {
+    width: 17.43%;
+    height: 8.66%;
+  }
+
+  .slider__phone_horizontal {
+    top: 29.74%;
+    left: 41.6%;
+  }
+
+  .slider__phone__shadow_horizontal {
+    width: 44.82%;
+    /* min-width: 344.26px; */
+    max-width: 100%;
+    height: auto;
+    /* min-height: 102.36px; */
+  }
+
+  .slider__phone__body_horizontal {
+    width: 89.84%;
+    height: 94.66%;
+  }
+  
+  .slider__phone__screen_horizontal {
+    width: 68.64%;
+    height: 78.33%;
+  }
+  
+  .slider__phone__button_horizontal {
+    width: 8.66%;
+    height: 17.43%;
+  }
+}
 
 
 
